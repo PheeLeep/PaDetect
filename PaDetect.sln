@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaDetectLib", "PaDetectLib\PaDetectLib.csproj", "{D299320B-92DC-45D1-A643-9D2A233A470A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaDetectCLI", "PaDetectCLI\PaDetectCLI.csproj", "{0CF4F852-66B1-4C9E-AF16-FDE00B19FC6A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4AF98466-598F-47BB-9F18-E699239F240A}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D299320B-92DC-45D1-A643-9D2A233A470A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D299320B-92DC-45D1-A643-9D2A233A470A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D299320B-92DC-45D1-A643-9D2A233A470A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D299320B-92DC-45D1-A643-9D2A233A470A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CF4F852-66B1-4C9E-AF16-FDE00B19FC6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CF4F852-66B1-4C9E-AF16-FDE00B19FC6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CF4F852-66B1-4C9E-AF16-FDE00B19FC6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CF4F852-66B1-4C9E-AF16-FDE00B19FC6A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A1F67AD6-E4A2-41A4-8FA8-3C877D66D1C6}
+	EndGlobalSection
+EndGlobal
