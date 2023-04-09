@@ -28,6 +28,7 @@
             Dispose();
             string newExtFile = Path.ChangeExtension(og.FullName, ".bin");
             og.MoveTo(newExtFile);
+            if (PaDetectClass.DeleteObjectAfterUnpad) og.Delete();
         }
 
         internal override void CheckForPad() {

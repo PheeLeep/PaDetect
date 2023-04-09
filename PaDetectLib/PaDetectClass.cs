@@ -156,6 +156,11 @@ namespace PaDetectLib {
             }
         }
 
+        /// <summary>
+        /// Gets whether the original object will be deleted after unpadding.
+        /// </summary>
+        public static bool DeleteObjectAfterUnpad { get; internal set; }
+
         // ----- Events
 
         /// <summary>
@@ -198,8 +203,8 @@ namespace PaDetectLib {
         /// <param name="objectPath">An object path target for scanning.</param>
         /// <param name="scanType">A scan type for a target object.</param>
         /// <param name="unPad">Determines whether a program allows to unpad once an object detects.</param>
-        /// <param name="useHeur">Use layman's byte analysis when the first analysis fails.</param>
-        public static void StartScan(string objectPath, ScanTypeE scanType, bool unPad = false) {
+        /// <param name="delOrig">Determines whether a program will delete the original object after unpad process.</param>
+        public static void StartScan(string objectPath, ScanTypeE scanType, bool unPad = false, bool delOrig = false) {
             lock (locker) {
                 if (IsOngoing) {
                     ErrorOccurred?.Invoke(new InvalidOperationException("Unable to run another scan while the previous was ongoing."));
@@ -213,7 +218,7 @@ namespace PaDetectLib {
                 ObjectPath = objectPath;
                 ScanType = scanType;
                 UnpadRequested = unPad;
-
+                DeleteObjectAfterUnpad = delOrig;
                 Thread t = new(() => {
                     string pathToScanDetail = ScanType == ScanTypeE.All ? "all drives in this computer" : "('" + ObjectPath + "')";
                     StatusTextOccurred?.Invoke("Initialized scanning on " + pathToScanDetail + "... (Time: " + DateTime.Now.ToString("dd/MM/yy hh:mm") + ")", -1, true);
@@ -290,7 +295,10 @@ namespace PaDetectLib {
                     case ScanTypeE.File:
                         if (!File.Exists(ObjectPath)) throw new FileNotFoundException("A file '" + ObjectPath + "' is not exists or it's a directory.");
                         totalObjects++;
-                        StartAnalyzeObject(new FileInfo(ObjectPath));
+                        FileInfo f = new FileInfo(ObjectPath);
+                        StatusTextOccurred?.Invoke("Scanning '" + f.Name + "'... (" + ObjectsScanned.ToString() + " objects scanned.)", GetPercentage());
+                        StartAnalyzeObject(f);
+                        ObjectsScanned++;
                         break;
                     case ScanTypeE.Folder:
                         if (!Directory.Exists(ObjectPath)) throw new FileNotFoundException("A directory '" + ObjectPath + "' is not exist.");

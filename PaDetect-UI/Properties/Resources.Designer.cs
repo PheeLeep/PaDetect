@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PaDetectCLI.Properties {
+namespace PaDetect_UI.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace PaDetectCLI.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PaDetectCLI.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PaDetect_UI.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,41 +61,22 @@ namespace PaDetectCLI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Usage:
-        ///	PaDetectCLI [scan options] [options]
-        ///
-        ///Scan Options:
-        ///	-f &lt;path&gt;       : Scan the specified file object.
-        ///	-d &lt;path&gt;       : Scan the directory and its subdirectories for file objects.
-        ///	-D &lt;path&gt;       : Scan all file objects inside the specified drive.
-        ///	-a              : Scan all file objects inside the computer and connected drives.
-        ///
-        ///Options:
-        ///	--min-size &lt;mb&gt; : Sets the value of minimum of object&apos;s size to be allowed
-        ///                      despite of binary padding. (not recommended to modi [rest of string was truncated]&quot;;.
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static string HelpFile {
+        internal static System.Drawing.Bitmap padetect_icon {
             get {
-                return ResourceManager.GetString("HelpFile", resourceCulture);
+                object obj = ResourceManager.GetObject("padetect-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 
-        ///    .....
-        ///   .......||_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ *
-        ///   .......||---------------------------
-        ///    .....       
-        ///           ----PaDetect----&gt;
-        ///
-        /// Author: PheeLeep
-        ///================================
-        /// GitHub: https://github.com/PheeLeep/PaDetect
-        ///.
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static string Logo {
+        internal static System.Drawing.Bitmap settings_gear {
             get {
-                return ResourceManager.GetString("Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("settings-gear", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }
