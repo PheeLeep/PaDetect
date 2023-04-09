@@ -135,7 +135,8 @@ namespace PaDetect_UI {
                     FixButton.Hide();
                     ScanStopButton.Enabled = false;
                     listView1.Items.Clear();
-                    PaDetectClass.StartScan(prevObject, prevScanType, prevPadRemoveReq);
+                    _ = bool.TryParse(SettingsClass.GetValue("RemoveOrigAfterUnpad"), out bool removeOrig);
+                    PaDetectClass.StartScan(prevObject, prevScanType, prevPadRemoveReq, removeOrig);
                     return;
                 }
                 if (MessageBox.Show(this, "Do you want to cancel scan?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No) return;
@@ -155,7 +156,8 @@ namespace PaDetect_UI {
 
                 ScanStopButton.Enabled = false;
                 listView1.Items.Clear();
-                PaDetectClass.StartScan(prevObject, prevScanType, prevPadRemoveReq);
+                _ = bool.TryParse(SettingsClass.GetValue("RemoveOrigAfterUnpad"), out bool removeOrig);
+                PaDetectClass.StartScan(prevObject, prevScanType, prevPadRemoveReq, removeOrig);
             }
         }
 
@@ -169,7 +171,8 @@ namespace PaDetect_UI {
                 ScanStopButton.Enabled = false;
                 listView1.Items.Clear();
                 prevPadRemoveReq = true;
-                PaDetectClass.StartScan(prevObject, prevScanType, prevPadRemoveReq);
+                _ = bool.TryParse(SettingsClass.GetValue("RemoveOrigAfterUnpad"), out bool removeOrig);
+                PaDetectClass.StartScan(prevObject, prevScanType, prevPadRemoveReq, removeOrig);
             }
         }
 

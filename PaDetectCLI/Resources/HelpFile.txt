@@ -8,12 +8,15 @@ Scan Options:
 	-a              : Scan all file objects inside the computer and connected drives.
 
 Options:
-	--min-size <mb> : Sets the value of minimum of object's size to be allowed
-                      despite of binary padding. (not recommended to modify
-                      unless it's necessary.) 
+	--del-orig      : Delete the original object after the unpad was completed.
+	                  (must add '-x' to use this argument.)
+
+	--min-size <mb> : Sets the value of minimum of object's size to be allowed 
+	                  despite of binary padding. (not recommended to modify
+				unless it's necessary.)
 					  
-                      Range: 25 MB to 650 MB (follows VirusTotal's max. size)
-                      Default: 100MB
+				Range: 25 MB to 650 MB (follows VirusTotal's max. size)
+				Default: 100MB
 
 	-x              : Remove padded bytes from a file object once detected.
 	-t <value>      : Set the tolerance when comparing file size (from 10% to 75%)

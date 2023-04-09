@@ -14,6 +14,7 @@ static class Program {
         bool cancelOccurred = false;
         bool alreadySetTolerance = false;
         bool alreadySetMinSize = false;
+        bool removeOrigObject = false;
 
         Console.Title = "PaDetect Console";
         Console.WriteLine(Properties.Resources.Logo);
@@ -27,6 +28,13 @@ static class Program {
         string objectPath = string.Empty;
         for (int i = 0; i < args.Length; i++) {
             switch (args[i]) {
+                case "--del-orig":
+                    if (removeOrigObject) {
+                        CommandLineEx.PrintLine("Delete original object already set.", CommandLineEx.PrintType.Warning);
+                        break;
+                    }
+                    removeOrigObject = true;
+                    break;
                 case "--min-size":
                     if (alreadySetMinSize) {
                         CommandLineEx.PrintLine("Minimum size tolerance already set.", CommandLineEx.PrintType.Warning);
@@ -111,7 +119,7 @@ static class Program {
         PaDetectClass.ScanFinished += PaDetectClass_ScanFinished;
 
         // Start the scanning process.
-        PaDetectClass.StartScan(objectPath, scanType, removePadsRequest);
+        PaDetectClass.StartScan(objectPath, scanType, removePadsRequest, removeOrigObject);
         while (PaDetectClass.IsOngoing && !PaDetectClass.CancelRequestPending) {
             if (!Console.KeyAvailable) continue;
             if (Console.ReadKey(true).Key != ConsoleKey.C) continue;

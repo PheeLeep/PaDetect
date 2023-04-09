@@ -26,13 +26,18 @@ namespace PaDetect_UI {
             string padTolerance = SettingsClass.GetValue("PadLenTolerance");
             PadToleranceTrackBar.Value = string.IsNullOrEmpty(padTolerance) || !int.TryParse(padTolerance, out int padTol) ||
                 padTol < PadToleranceTrackBar.Minimum || padTol > PadToleranceTrackBar.Maximum ? 15 : padTol;
+            string removeOrigReq = SettingsClass.GetValue("RemoveOrigAfterUnpad");
+            _ = bool.TryParse(removeOrigReq, out bool removedReq);
+
+            RemoveOrigCheckBox.Checked = removedReq;
+
             panel1.Enabled = !PaDetectLib.PaDetectClass.IsOngoing;
             SettingsWarnPanel.Visible = PaDetectLib.PaDetectClass.IsOngoing;
             label3.Text = "Tolerance of padding bytes size (" + PadToleranceTrackBar.Value.ToString() + "%)";
             isInit = true;
         }
 
-        private void sizeToleranceNumUD_ValueChanged(object sender, EventArgs e) {
+        private void SizeToleranceNumUD_ValueChanged(object sender, EventArgs e) {
             lock (locker) {
                 if (!isInit) return;
                 SettingsClass.SetValue("SizeTolerance", (sizeToleranceNumUD.Value * 1024 * 1024).ToString());
@@ -69,6 +74,13 @@ namespace PaDetect_UI {
 
         private void Icons8Label_Click(object sender, EventArgs e) {
             RunLink(@"https://icons8.com");
+        }
+
+        private void RemoveOrigCheckBox_CheckedChanged(object sender, EventArgs e) {
+            lock (locker) {
+                if (!isInit) return;
+                SettingsClass.SetValue("RemoveOrigAfterUnpad", RemoveOrigCheckBox.Checked.ToString());
+            }
         }
     }
 }

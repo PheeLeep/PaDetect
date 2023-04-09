@@ -42,6 +42,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.RemoveOrigCheckBox = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -77,6 +78,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.RemoveOrigCheckBox);
             this.panel1.Controls.Add(this.PadToleranceTrackBar);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.sizeToleranceNumUD);
@@ -117,7 +119,7 @@
             this.sizeToleranceNumUD.Size = new System.Drawing.Size(104, 30);
             this.sizeToleranceNumUD.TabIndex = 7;
             this.sizeToleranceNumUD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.sizeToleranceNumUD.ValueChanged += new System.EventHandler(this.sizeToleranceNumUD_ValueChanged);
+            this.sizeToleranceNumUD.ValueChanged += new System.EventHandler(this.SizeToleranceNumUD_ValueChanged);
             // 
             // label2
             // 
@@ -171,10 +173,10 @@
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.pictureBox1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 32);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(676, 415);
+            this.tabPage2.Size = new System.Drawing.Size(676, 418);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "About";
             // 
@@ -260,6 +262,17 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // RemoveOrigCheckBox
+            // 
+            this.RemoveOrigCheckBox.AutoSize = true;
+            this.RemoveOrigCheckBox.Location = new System.Drawing.Point(46, 234);
+            this.RemoveOrigCheckBox.Name = "RemoveOrigCheckBox";
+            this.RemoveOrigCheckBox.Size = new System.Drawing.Size(305, 27);
+            this.RemoveOrigCheckBox.TabIndex = 10;
+            this.RemoveOrigCheckBox.Text = "Remove original object after unpad.";
+            this.RemoveOrigCheckBox.UseVisualStyleBackColor = true;
+            this.RemoveOrigCheckBox.CheckedChanged += new System.EventHandler(this.RemoveOrigCheckBox_CheckedChanged);
+            // 
             // SettingsDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -314,5 +327,6 @@
         private Label LicenseLabel;
         private Label label8;
         private Label Icons8Label;
+        private CheckBox RemoveOrigCheckBox;
     }
 }
