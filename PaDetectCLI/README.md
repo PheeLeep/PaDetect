@@ -17,6 +17,8 @@ PaDetectCLI [scan options] [options]
 	-a        : Scan all file objects inside the computer and connected drives.
 
 ### Options:
+	--del-orig      : Delete the original object after the unpad was completed.
+	                  (must add '-x' to use this argument.)
 	--min-size <mb> : Sets the value of minimum of object's size to be allowed
                       despite of binary padding. (not recommended to modify
                       unless it's necessary.) 

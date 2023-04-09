@@ -2,7 +2,7 @@
     public partial class SelectDriveDialog : Form {
         private readonly object locker = new object();
 
-        public string DriveName { get; private set; }
+        public string DriveName { get; private set; } = string.Empty;
         public SelectDriveDialog() {
             InitializeComponent();
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);

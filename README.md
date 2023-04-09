@@ -25,7 +25,8 @@ The following projects are will be documented in the upcoming commits.
 - [PaDetectLib](https://github.com/PheeLeep/PaDetect/tree/master/PaDetectLib): A core
 library of PaDetect projects.
 - [PaDetectCLI](https://github.com/PheeLeep/PaDetect/tree/master/PaDetectCLI): A cross-platform console of PaDetect.
-- **PaDetect-UI**: A Windows-based Graphical User Interface (GUI) of PaDetect. (soon to release)
+- [PaDetect-UI](https://github.com/PheeLeep/PaDetect/tree/master/PaDetect-UI): A Windows-based Graphical User Interface (GUI) of PaDetect,
+with simple and ease-of-use interaction for beginner users.
 
 ## Releases
 The Release section will be available in the upcoming commits. 

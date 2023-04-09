@@ -7,6 +7,12 @@
     <Nullable>enable</Nullable>
     <StartupObject>PaDetectCLI.Program</StartupObject>
     <PlatformTarget>AnyCPU</PlatformTarget>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <FileVersion>1.0.0</FileVersion>
+    <Title>PaDetectCLI (Pad Detect Console)</Title>
+    <Authors>PheeLeep</Authors>
+    <Description>A console version of PaDetect for analyst and advance users.</Description>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

@@ -9,6 +9,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <StartupObject>PaDetect_UI.Program</StartupObject>
     <ApplicationIcon>padetect-icon.ico</ApplicationIcon>
+    <FileVersion>1.0.0</FileVersion>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <Title>PaDetect-UI (Pad Detect UI)</Title>
+    <Authors>PheeLeep</Authors>
+    <Description>A GUI Windows-based version of PaDetect, with ease-of-use interface for beginner user.</Description>
   </PropertyGroup>
 
   <ItemGroup>
