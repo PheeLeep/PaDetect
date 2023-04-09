@@ -23,46 +23,135 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.GitHubRepoLabel = new System.Windows.Forms.Label();
+            this.LicenseLabel = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Icons8Label = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.PadToleranceTrackBar = new System.Windows.Forms.TrackBar();
-            this.label3 = new System.Windows.Forms.Label();
-            this.sizeToleranceNumUD = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.SettingsWarnPanel = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.Icons8Label = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.LicenseLabel = new System.Windows.Forms.Label();
-            this.GitHubRepoLabel = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.sizeToleranceNumUD = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.PadToleranceTrackBar = new System.Windows.Forms.TrackBar();
             this.RemoveOrigCheckBox = new System.Windows.Forms.CheckBox();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PadToleranceTrackBar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sizeToleranceNumUD)).BeginInit();
-            this.SettingsWarnPanel.SuspendLayout();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            this.SettingsWarnPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sizeToleranceNumUD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PadToleranceTrackBar)).BeginInit();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tabPage2
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(684, 451);
-            this.tabControl1.TabIndex = 0;
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.tabPage2.Controls.Add(this.Icons8Label);
+            this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Controls.Add(this.LicenseLabel);
+            this.tabPage2.Controls.Add(this.GitHubRepoLabel);
+            this.tabPage2.Controls.Add(this.label7);
+            this.tabPage2.Controls.Add(this.label6);
+            this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Controls.Add(this.pictureBox1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 32);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(676, 415);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "About";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PaDetect_UI.Properties.Resources.padetect_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(45, 39);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(96, 96);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(152, 45);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(168, 38);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "PaDetect-UI";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.Location = new System.Drawing.Point(156, 88);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(501, 59);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "PaDetect (Pad Detect) is a utility program that checks objects for possible binar" +
+    "y padding.";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(152, 160);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(146, 23);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Author: PheeLeep";
+            // 
+            // GitHubRepoLabel
+            // 
+            this.GitHubRepoLabel.AutoSize = true;
+            this.GitHubRepoLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.GitHubRepoLabel.Location = new System.Drawing.Point(45, 214);
+            this.GitHubRepoLabel.Name = "GitHubRepoLabel";
+            this.GitHubRepoLabel.Size = new System.Drawing.Size(108, 23);
+            this.GitHubRepoLabel.TabIndex = 4;
+            this.GitHubRepoLabel.Text = "GitHub Repo";
+            this.GitHubRepoLabel.Click += new System.EventHandler(this.GitHubRepoLabel_Click);
+            // 
+            // LicenseLabel
+            // 
+            this.LicenseLabel.AutoSize = true;
+            this.LicenseLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.LicenseLabel.Location = new System.Drawing.Point(45, 241);
+            this.LicenseLabel.Name = "LicenseLabel";
+            this.LicenseLabel.Size = new System.Drawing.Size(130, 23);
+            this.LicenseLabel.TabIndex = 5;
+            this.LicenseLabel.Text = "Licensed as MIT";
+            this.LicenseLabel.Click += new System.EventHandler(this.LicenseLabel_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(45, 290);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(74, 23);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Credit/s:";
+            // 
+            // Icons8Label
+            // 
+            this.Icons8Label.AutoSize = true;
+            this.Icons8Label.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.Icons8Label.Location = new System.Drawing.Point(86, 313);
+            this.Icons8Label.Name = "Icons8Label";
+            this.Icons8Label.Size = new System.Drawing.Size(127, 23);
+            this.Icons8Label.TabIndex = 7;
+            this.Icons8Label.Text = "Icons by Icons8";
+            this.Icons8Label.Click += new System.EventHandler(this.Icons8Label_Click);
             // 
             // tabPage1
             // 
@@ -75,69 +164,6 @@
             this.tabPage1.Size = new System.Drawing.Size(676, 415);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Settings";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.RemoveOrigCheckBox);
-            this.panel1.Controls.Add(this.PadToleranceTrackBar);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.sizeToleranceNumUD);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(670, 320);
-            this.panel1.TabIndex = 0;
-            // 
-            // PadToleranceTrackBar
-            // 
-            this.PadToleranceTrackBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PadToleranceTrackBar.Location = new System.Drawing.Point(46, 172);
-            this.PadToleranceTrackBar.Maximum = 75;
-            this.PadToleranceTrackBar.Minimum = 10;
-            this.PadToleranceTrackBar.Name = "PadToleranceTrackBar";
-            this.PadToleranceTrackBar.Size = new System.Drawing.Size(578, 56);
-            this.PadToleranceTrackBar.TabIndex = 9;
-            this.PadToleranceTrackBar.Value = 75;
-            this.PadToleranceTrackBar.ValueChanged += new System.EventHandler(this.PadToleranceTrackBar_ValueChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(46, 146);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(299, 23);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Tolerance of padding bytes size: (75%)";
-            // 
-            // sizeToleranceNumUD
-            // 
-            this.sizeToleranceNumUD.Location = new System.Drawing.Point(103, 81);
-            this.sizeToleranceNumUD.Name = "sizeToleranceNumUD";
-            this.sizeToleranceNumUD.Size = new System.Drawing.Size(104, 30);
-            this.sizeToleranceNumUD.TabIndex = 7;
-            this.sizeToleranceNumUD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.sizeToleranceNumUD.ValueChanged += new System.EventHandler(this.SizeToleranceNumUD_ValueChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(213, 85);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 23);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "MB";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(527, 23);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Minimum size tolerance (max size is based on VirusTotal\'s max size):";
             // 
             // SettingsWarnPanel
             // 
@@ -162,105 +188,68 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "This settings is disabled while the scan is in progress.";
             // 
-            // tabPage2
+            // panel1
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.tabPage2.Controls.Add(this.Icons8Label);
-            this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Controls.Add(this.LicenseLabel);
-            this.tabPage2.Controls.Add(this.GitHubRepoLabel);
-            this.tabPage2.Controls.Add(this.label7);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.pictureBox1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(676, 418);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "About";
+            this.panel1.Controls.Add(this.RemoveOrigCheckBox);
+            this.panel1.Controls.Add(this.PadToleranceTrackBar);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.sizeToleranceNumUD);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(670, 320);
+            this.panel1.TabIndex = 0;
             // 
-            // Icons8Label
+            // label1
             // 
-            this.Icons8Label.AutoSize = true;
-            this.Icons8Label.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
-            this.Icons8Label.Location = new System.Drawing.Point(86, 313);
-            this.Icons8Label.Name = "Icons8Label";
-            this.Icons8Label.Size = new System.Drawing.Size(127, 23);
-            this.Icons8Label.TabIndex = 7;
-            this.Icons8Label.Text = "Icons by Icons8";
-            this.Icons8Label.Click += new System.EventHandler(this.Icons8Label_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(46, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(527, 23);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Minimum size tolerance (max size is based on VirusTotal\'s max size):";
             // 
-            // label8
+            // label2
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(45, 290);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(74, 23);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Credit/s:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(213, 85);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 23);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "MB";
             // 
-            // LicenseLabel
+            // sizeToleranceNumUD
             // 
-            this.LicenseLabel.AutoSize = true;
-            this.LicenseLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
-            this.LicenseLabel.Location = new System.Drawing.Point(45, 241);
-            this.LicenseLabel.Name = "LicenseLabel";
-            this.LicenseLabel.Size = new System.Drawing.Size(130, 23);
-            this.LicenseLabel.TabIndex = 5;
-            this.LicenseLabel.Text = "Licensed as MIT";
-            this.LicenseLabel.Click += new System.EventHandler(this.LicenseLabel_Click);
+            this.sizeToleranceNumUD.Location = new System.Drawing.Point(103, 81);
+            this.sizeToleranceNumUD.Name = "sizeToleranceNumUD";
+            this.sizeToleranceNumUD.Size = new System.Drawing.Size(104, 30);
+            this.sizeToleranceNumUD.TabIndex = 7;
+            this.sizeToleranceNumUD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.sizeToleranceNumUD.ValueChanged += new System.EventHandler(this.SizeToleranceNumUD_ValueChanged);
             // 
-            // GitHubRepoLabel
+            // label3
             // 
-            this.GitHubRepoLabel.AutoSize = true;
-            this.GitHubRepoLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
-            this.GitHubRepoLabel.Location = new System.Drawing.Point(45, 214);
-            this.GitHubRepoLabel.Name = "GitHubRepoLabel";
-            this.GitHubRepoLabel.Size = new System.Drawing.Size(108, 23);
-            this.GitHubRepoLabel.TabIndex = 4;
-            this.GitHubRepoLabel.Text = "GitHub Repo";
-            this.GitHubRepoLabel.Click += new System.EventHandler(this.GitHubRepoLabel_Click);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(46, 146);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(299, 23);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Tolerance of padding bytes size: (75%)";
             // 
-            // label7
+            // PadToleranceTrackBar
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(152, 160);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(146, 23);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Author: PheeLeep";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.PadToleranceTrackBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.Location = new System.Drawing.Point(156, 88);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(501, 59);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "PaDetect (Pad Detect) is a utility program that checks objects for possible binar" +
-    "y padding.";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(152, 45);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(168, 38);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "PaDetect-UI";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::PaDetect_UI.Properties.Resources.padetect_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(45, 39);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(96, 96);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.PadToleranceTrackBar.Location = new System.Drawing.Point(46, 172);
+            this.PadToleranceTrackBar.Maximum = 75;
+            this.PadToleranceTrackBar.Minimum = 10;
+            this.PadToleranceTrackBar.Name = "PadToleranceTrackBar";
+            this.PadToleranceTrackBar.Size = new System.Drawing.Size(578, 56);
+            this.PadToleranceTrackBar.TabIndex = 9;
+            this.PadToleranceTrackBar.Value = 75;
+            this.PadToleranceTrackBar.ValueChanged += new System.EventHandler(this.PadToleranceTrackBar_ValueChanged);
             // 
             // RemoveOrigCheckBox
             // 
@@ -272,6 +261,17 @@
             this.RemoveOrigCheckBox.Text = "Remove original object after unpad.";
             this.RemoveOrigCheckBox.UseVisualStyleBackColor = true;
             this.RemoveOrigCheckBox.CheckedChanged += new System.EventHandler(this.RemoveOrigCheckBox_CheckedChanged);
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(684, 451);
+            this.tabControl1.TabIndex = 0;
             // 
             // SettingsDialog
             // 
@@ -291,27 +291,35 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Settings";
             this.Load += new System.EventHandler(this.SettingsDialog_Load);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PadToleranceTrackBar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sizeToleranceNumUD)).EndInit();
-            this.SettingsWarnPanel.ResumeLayout(false);
-            this.SettingsWarnPanel.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            this.SettingsWarnPanel.ResumeLayout(false);
+            this.SettingsWarnPanel.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sizeToleranceNumUD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PadToleranceTrackBar)).EndInit();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private TabControl tabControl1;
-        private TabPage tabPage1;
         private TabPage tabPage2;
+        private Label Icons8Label;
+        private Label label8;
+        private Label LicenseLabel;
+        private Label GitHubRepoLabel;
+        private Label label7;
+        private Label label6;
+        private Label label5;
+        private PictureBox pictureBox1;
+        private TabPage tabPage1;
         private Panel panel1;
+        private CheckBox RemoveOrigCheckBox;
         private TrackBar PadToleranceTrackBar;
         private Label label3;
         private NumericUpDown sizeToleranceNumUD;
@@ -319,14 +327,6 @@
         private Label label1;
         private Panel SettingsWarnPanel;
         private Label label4;
-        private PictureBox pictureBox1;
-        private Label label5;
-        private Label label6;
-        private Label label7;
-        private Label GitHubRepoLabel;
-        private Label LicenseLabel;
-        private Label label8;
-        private Label Icons8Label;
-        private CheckBox RemoveOrigCheckBox;
+        private TabControl tabControl1;
     }
 }

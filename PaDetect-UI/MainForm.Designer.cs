@@ -36,7 +36,6 @@
             this.StagePanel = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.SummaryPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
@@ -50,6 +49,7 @@
             this.ObjectsScannedLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pBar = new System.Windows.Forms.ProgressBar();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.HeaderPanel.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.StagePanel.SuspendLayout();
@@ -85,6 +85,8 @@
             this.ScanStopButton.Size = new System.Drawing.Size(110, 37);
             this.ScanStopButton.TabIndex = 5;
             this.ScanStopButton.Text = "Scan";
+            this.toolTip1.SetToolTip(this.ScanStopButton, "Open Scanner prompt, and start scanning. In addition, right-click if you want to " +
+        "rescan the previous object.");
             this.ScanStopButton.UseVisualStyleBackColor = false;
             this.ScanStopButton.Click += new System.EventHandler(this.ScanStopButton_Click);
             // 
@@ -114,6 +116,7 @@
             this.SettingsButton.Name = "SettingsButton";
             this.SettingsButton.Size = new System.Drawing.Size(37, 37);
             this.SettingsButton.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.SettingsButton, "Open Settings");
             this.SettingsButton.UseVisualStyleBackColor = false;
             this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
             // 
@@ -128,6 +131,7 @@
             this.FixButton.Size = new System.Drawing.Size(110, 37);
             this.FixButton.TabIndex = 6;
             this.FixButton.Text = "Fix";
+            this.toolTip1.SetToolTip(this.FixButton, "Press to rescan and fix the affected object/s.");
             this.FixButton.UseVisualStyleBackColor = false;
             this.FixButton.Visible = false;
             this.FixButton.Click += new System.EventHandler(this.FixButton_Click);
@@ -162,7 +166,7 @@
             this.StagePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.StagePanel.Location = new System.Drawing.Point(0, 156);
             this.StagePanel.Name = "StagePanel";
-            this.StagePanel.Size = new System.Drawing.Size(715, 390);
+            this.StagePanel.Size = new System.Drawing.Size(715, 295);
             this.StagePanel.TabIndex = 1;
             // 
             // groupBox1
@@ -173,32 +177,19 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(715, 390);
+            this.groupBox1.Size = new System.Drawing.Size(715, 295);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Scan Result";
             // 
             // SummaryPanel
             // 
-            this.SummaryPanel.Controls.Add(this.label1);
             this.SummaryPanel.Controls.Add(this.groupBox2);
             this.SummaryPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SummaryPanel.Location = new System.Drawing.Point(3, 23);
             this.SummaryPanel.Name = "SummaryPanel";
-            this.SummaryPanel.Size = new System.Drawing.Size(709, 364);
+            this.SummaryPanel.Size = new System.Drawing.Size(709, 269);
             this.SummaryPanel.TabIndex = 10;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoEllipsis = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(35, 247);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(639, 120);
-            this.label1.TabIndex = 8;
-            this.label1.Text = resources.GetString("label1.Text");
             // 
             // groupBox2
             // 
@@ -228,6 +219,7 @@
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(636, 191);
             this.listView1.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.listView1, resources.GetString("listView1.ToolTip"));
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
@@ -262,7 +254,7 @@
             this.ScanProgressPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ScanProgressPanel.Location = new System.Drawing.Point(3, 23);
             this.ScanProgressPanel.Name = "ScanProgressPanel";
-            this.ScanProgressPanel.Size = new System.Drawing.Size(709, 364);
+            this.ScanProgressPanel.Size = new System.Drawing.Size(709, 269);
             this.ScanProgressPanel.TabIndex = 0;
             // 
             // StatusText
@@ -334,12 +326,16 @@
             this.pBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.pBar.TabIndex = 0;
             // 
+            // toolTip1
+            // 
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.ClientSize = new System.Drawing.Size(715, 546);
+            this.ClientSize = new System.Drawing.Size(715, 451);
             this.Controls.Add(this.StagePanel);
             this.Controls.Add(this.HeaderPanel);
             this.DoubleBuffered = true;
@@ -387,8 +383,8 @@
         private ColumnHeader columnHeader3;
         private ColumnHeader columnHeader4;
         private Button FixButton;
-        private Label label1;
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem reScanToolStripMenuItem;
+        private ToolTip toolTip1;
     }
 }

@@ -60,7 +60,10 @@
   <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>21, 20</value>
   </metadata>
-  <data name="label1.Text" xml:space="preserve">
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>207, 20</value>
+  </metadata>
+  <data name="listView1.ToolTip" xml:space="preserve">
     <value>NOTE: This program will rename the extensions of both the original and unpadded objects as '.bin' for your safety.
 
 Once unpadded, you can now safely submit the unpadded object to VirusTotal, or let your anti-malware software take the rest.</value>

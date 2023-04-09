@@ -168,6 +168,7 @@ namespace PaDetect_UI {
                     "Object Path: " + (prevScanType == PaDetectClass.ScanTypeE.All ? "All objects" : prevObject), "",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No) return;
 
+                FixButton.Hide();
                 ScanStopButton.Enabled = false;
                 listView1.Items.Clear();
                 prevPadRemoveReq = true;
