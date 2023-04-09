@@ -29,7 +29,7 @@ library of PaDetect projects.
 with simple and ease-of-use interaction for beginner users.
 
 ## Releases
-The Release section will be available in the upcoming commits. 
+The Release binaries is now available [here.](https://github.com/PheeLeep/PaDetect/releases)
 
 A .NET 7 (SDK or Runtime) is required in order to run binaries. (.NET 7 Desktop Runtime is also required for PaDetect-UI)
 
