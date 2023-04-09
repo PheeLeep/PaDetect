@@ -290,7 +290,10 @@ namespace PaDetectLib {
                     case ScanTypeE.File:
                         if (!File.Exists(ObjectPath)) throw new FileNotFoundException("A file '" + ObjectPath + "' is not exists or it's a directory.");
                         totalObjects++;
-                        StartAnalyzeObject(new FileInfo(ObjectPath));
+                        FileInfo f = new FileInfo(ObjectPath);
+                        StatusTextOccurred?.Invoke("Scanning '" + f.Name + "'... (" + ObjectsScanned.ToString() + " objects scanned.)", GetPercentage());
+                        StartAnalyzeObject(f);
+                        ObjectsScanned++;
                         break;
                     case ScanTypeE.Folder:
                         if (!Directory.Exists(ObjectPath)) throw new FileNotFoundException("A directory '" + ObjectPath + "' is not exist.");
